@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("h3").toggle();
+    $("img").toggle();
+  });
+});
+</script>
+
+
+
+<script>
+    function tıkla(){
+        const txt1 = '{"name":"siber güvenliğin sağlanması", "süresi":8 }'
+    const obj1 = JSON.parse(txt1);
+    document.getElementById("prj1").innerHTML ="Proje adı:"+ obj1.name + ",Proje süresi:" + obj1.süresi+" ay";
+        const txt2 = '{"name":"veri tabanı güncelleme sistemi", "süresi":72}'
+        const obj2 = JSON.parse(txt2);
+        document.getElementById("prj2").innerHTML ="Proje adı:" +obj2.name + ", Proje süresi:" + obj2.süresi+" hafta";
+            const txt3 = '{"name":"oyun motoru geliştirme", "süresi":2}'
+            const obj3 = JSON.parse(txt3);
+            document.getElementById("prj3").innerHTML ="Proje adı:" +obj3.name + ",Proje süresi:" + obj3.süresi+" yıl";
+    }
+        </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-info ">
+        <div class="container">
+          <a class="navbar-brand ms-auto" href="index.html" style="color:white ;">ANASAYFA</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="hakkımda.html" style="color:white ;">HAKKIMDA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="iletişim.html" style="color:white ;">İLETİŞİM</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="portfolio.html" style="color:white ;">PORTFOLİO</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <section>
+        <div class="container py-5" id="btn">
+            <button id="btn" class="btn btn-success" data-bs-toggle="collapse" onclick="tıkla()">
+                <h1>PROJELER</h1>
+            </button>
+            <h3 id="prj1" class="my-3"></h3>
+            <div class="container my-5">
+                <img src="C:\Users\Muhsin21\Desktop\web ödevi2\sibergüvenlik.jpeg" class="img-fluid" alt="...">
+            </div>
+            <h3 id="prj2" class="my-3"></h3>
+            <div class="container">
+                <img src="C:\Users\Muhsin21\Desktop\web ödevi2\veritabanı.jpeg" class="img-thumbnail" alt="...">
+            </div>
+            <h3 id="prj3" class="my-3"></h3>
+            <div class="container ">
+                <img src="C:\Users\Muhsin21\Desktop\web ödevi2\oyunmotoru.jpeg" class="img-thumbnail" alt="...">
+            </div>
+          </div>
+      </section>
+      
+    
+</body>
+</html>
+
+
+
